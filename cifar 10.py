@@ -91,7 +91,7 @@ datagen = ImageDataGenerator(
 )
 
 train_it = datagen.flow_from_directory( 
-    directory = "D:/Downloads/IML/cnn project/data/train",
+    directory = , # path to training dataset
     target_size=inp_shp[:2],
     color_mode='rgb',
     class_mode='sparse',
@@ -101,7 +101,7 @@ train_it = datagen.flow_from_directory(
     )
 
 val_it = datagen.flow_from_directory( 
-    directory = "D:/Downloads/IML/cnn project/data/train",
+    directory = , # path to training dataset
     target_size=inp_shp[:2],
     color_mode='rgb',
     class_mode='sparse',
@@ -111,7 +111,7 @@ val_it = datagen.flow_from_directory(
     )
 
 test_it = ImageDataGenerator(rescale = 1/255).flow_from_directory(
-    directory = "D:/Downloads/IML/cnn project/data/test",
+    directory = , # path to testing dataset
     target_size=inp_shp[:2],
     color_mode='rgb',
     class_mode='sparse',
